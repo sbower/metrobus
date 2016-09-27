@@ -1,7 +1,6 @@
 module Metrobus
   # Connection class - provides an abstration to the rest endpoint
   class Connection
-
     # Sends rest request to the metrobus REST service
     # @param path [String] path string
     # @param verb [String] get, post, head, etc.

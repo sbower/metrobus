@@ -6,15 +6,8 @@ module Metrobus
 
     attr_accessor :description, :providerid, :route
 
-    # Override for the initialization of the Route object that retreives the
-    # directions for this route.
-    # @param hash [Hash] key value hash constructed for JSON from the rest service
-    # @return [Object] of Metrobus::Route
-    def initialize(hash)
-      super(hash)
-      @directions = nil
-    end
-
+    # Gets the valid directions for this route
+    # @return [Array] valid directions for this route
     def directions
       @directions ||= Metrobus::Direction.get(@route)
     end

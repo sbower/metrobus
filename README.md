@@ -1,4 +1,4 @@
-# Metrobus![Build Status](https://api.travis-ci.org/sbower/metrobus.svg) [![Gem Version](https://badge.fury.io/rb/cucloud.svg)](https://badge.fury.io/rb/cucloud) [![Coverage Status](https://coveralls.io/repos/github/sbower/metrobus/badge.svg?branch=master)](https://coveralls.io/github/sbower/metrobus?branch=master)
+# Metrobus![Build Status](https://api.travis-ci.org/sbower/metrobus.svg) [![Gem Version](https://badge.fury.io/rb/metrobus.svg)](https://badge.fury.io/rb/metrobus) [![Coverage Status](https://coveralls.io/repos/github/sbower/metrobus/badge.svg?branch=master)](https://coveralls.io/github/sbower/metrobus?branch=master)
 
 Library to wrap the metrotransit.org web services which provide real-time transit departure data
 

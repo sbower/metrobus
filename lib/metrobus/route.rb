@@ -4,7 +4,7 @@ module Metrobus
     # Path for the route endpoint
     ROUTES_PATH = 'Routes'.freeze
 
-    attr_accessor :description, :providerid, :route, :directions
+    attr_accessor :description, :providerid, :route
 
     # Override for the initialization of the Route object that retreives the
     # directions for this route.
@@ -12,14 +12,18 @@ module Metrobus
     # @return [Object] of Metrobus::Route
     def initialize(hash)
       super(hash)
-      @directions = Metrobus::Direction.get(@route)
+      @directions = nil
+    end
+
+    def directions
+      @directions ||= Metrobus::Direction.get(@route)
     end
 
     # Finds directions_id containing the passed in direction_name for this route
     # @param direction_name [String] direction_name a user is looking for
     # @return [String] representing the diretion_id for the given route
     def get_direction_id(direction_name)
-      matching_directions = @directions.find do |matching_direction|
+      matching_directions = directions.find do |matching_direction|
         matching_direction.direction_name.downcase.include?(direction_name.downcase)
       end
 

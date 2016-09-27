@@ -29,19 +29,19 @@ describe Metrobus::Departure do
   end
 
   it 'will return a valid depature time for route 5 direction 4 stop 7SOL (actual)' do
-    departues = Metrobus::Departure.get('5', '4', '7SOL')
-    expect(departues.length).to be 2
-    expect(departues[0].get_next_departure_time).to eq '3 Min'
+    departures = Metrobus::Departure.get('5', '4', '7SOL')
+    expect(departures.length).to be 2
+    expect(departures[0].get_next_departure_time).to eq '3 Min'
   end
 
   it 'will return a valid depature time for route 121 direction 2 stop BLHA (calculated)' do
-    departues = Metrobus::Departure.get('121', '2', 'BLHA')
-    expect(departues.length).to be 1
-    expect(departues[0].get_next_departure_time).to eq '5 Min'
+    departures = Metrobus::Departure.get('121', '2', 'BLHA')
+    expect(departures.length).to be 1
+    expect(departures[0].get_next_departure_time).to eq '5 Min'
   end
 
   it 'will not find depatrues for route 5 direction 1 stop 7SOL' do
-    departues = Metrobus::Departure.get('5', '1', '7SOL')
-    expect(departues).to be_empty
+    departures = Metrobus::Departure.get('5', '1', '7SOL')
+    expect(departures).to be_empty
   end
 end

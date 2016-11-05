@@ -37,7 +37,7 @@ found_routes = Metrobus::Route.find("u of m")
 In this example all routes containing the string "u of m" will be returned,
 output might look something like.
 
->*************************
+```*************************
 2 - Franklin Av - Riverside Av - U of M - 8th St SE
 3 - U of M - Como Av - Energy Park Dr - Maryland Av
 6 - U of M - Hennepin - Xerxes - France - Southdale
@@ -62,6 +62,7 @@ output might look something like.
 652 - Express - Plymouth Rd - Co Rd 73 P&R - U of M
 789 - Maple Grove - U of M
 *************************
+```
 
 If you have a route object you can get the direction_id with the following:
 
